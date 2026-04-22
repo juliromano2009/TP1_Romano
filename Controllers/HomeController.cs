@@ -15,6 +15,8 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        new Grupo grupo = new Grupo();
+        ViewsBag.Integrantes = grupo.DevolverIntegrantes();
         return View();
     }
 
