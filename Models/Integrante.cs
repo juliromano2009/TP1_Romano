@@ -21,6 +21,16 @@ public class Integrante
         Familiares = familiares ?? new List<string>();
         Intereses = intereses ?? new List<string>();
     }
+
+    public int getDNI()
+    {
+        return DNI;
+    }
+
+    public string getNombre()
+    {
+        return Nombre;
+    }
 }
 
     
