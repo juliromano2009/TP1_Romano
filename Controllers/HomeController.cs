@@ -22,6 +22,9 @@ public class HomeController : Controller
 
     public IActionResult DetalleIntegrante (int dni)
     {
+        Grupo grupo  = new Grupo();
+        Integrante integrante = grupo.GetIntegrante(dni);
+        ViewBag.Integrante = integrante;
         return View();
     }
 

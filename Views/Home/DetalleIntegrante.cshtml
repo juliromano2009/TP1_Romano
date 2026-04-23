@@ -1,0 +1,27 @@
+<head>
+    <title>Detalle del Integrante</title>
+</head>
+<body>
+    <h1>Detalle del Integrante</h1>
+    <p>Nombre: @ViewBag.Integrante.getNombre()</p>
+    <p>DNI: @ViewBag.Integrante.getDNI()</p>
+    <p>Edad: @ViewBag.Integrante.getEdad()</p>
+    <p>Fecha de Nacimiento: @ViewBag.Integrante.getFechaNacimiento().ToString("dd/MM/yyyy")</p>
+    <p>Foto:</p>
+    <img src="@ViewBag.Integrante.getFoto()" alt="Foto de @ViewBag.Integrante.getNombre()"  />
+    <p>Familiares:</p>
+    <ul>
+        @foreach (string familiar in ViewBag.Integrante.getFamiliares())
+        {
+            <li>@familiar</li>
+        }
+    </ul>
+    <p>Intereses:</p>
+    <ul>
+        @foreach (string interes in ViewBag.Integrante.getIntereses())
+        {
+            <li>@interes</li>
+        }
+    </ul>
+    <a href="@Url.Action("Index", "Home")">Volver a la lista</a>
+</body>
