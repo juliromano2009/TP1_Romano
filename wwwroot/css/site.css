@@ -24,7 +24,8 @@ a {
   text-decoration: none;
 }
 
-body div li {
+.integrantes {
+  padding-top: 10%;
   font-size: 200%;
 }
 
